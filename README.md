@@ -1,15 +1,14 @@
 vagrant-devstack
 ================
 
-Start a [devstack](http://devstack.org/) instance in a [vagrant](http://www.vagrantup.com/) virtual machine:
+Start a [DevStack](http://devstack.org/) instance in a [Vagrant](http://www.vagrantup.com/) wrapped virtual machine (VirtualBox):
 
+    $ vagrant plugin install landrush
     $ vagrant up
 
-Note the usernames and passwords provided at the end of the run.
+The access credentials will be generated and displayed after you boot for the first time.
 
-[Horizon](https://github.com/openstack/horizon/) will be port forwarded:
-
-    $ open http://127.0.0.1:8000/
+You can access all of the services on the VM on your host machine using the `devstack.vagrant.dev` hostname. This is accomplished with the [Landrush](https://github.com/phinze/landrush) Vagrant plugin.
 
 Login to the machine as the `stack` user:
 
